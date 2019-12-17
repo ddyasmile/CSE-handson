@@ -1,0 +1,23 @@
+docker stop frontend
+docker stop shipping
+docker stop user
+docker stop orders
+docker stop carts
+docker stop payment
+docker stop catalogue
+docker stop mongo-db
+docker stop catalogue-db
+docker stop nginx-proxy
+docker stop nginx-static
+
+docker rm frontend
+docker rm shipping
+docker rm user
+docker rm orders
+docker rm carts
+docker rm payment
+docker rm catalogue
+docker rm mongo-db
+docker rm catalogue-db
+docker rm nginx-proxy
+docker rm nginx-static
