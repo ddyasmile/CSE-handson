@@ -1,0 +1,23 @@
+Q1:What's relationship between Apache Zookeeper and paxos protocol?
+A1:
+    Zookeeper 集群与架构与 Paxos 相似。
+    在Zookeeper集群中，主要分为三者角色，而每一个节点同时只能扮演一种角色，这三种角色分别是：
+        Leader, Follower,Observer.
+    Leader 是通过一定的选举算法产生的。
+    其中，Leader 选举算法是 fast paxos 的一种实现。
+
+Q2:
+A2:
+    Zookeeper 能为分布式应用提供一致性服务，提供的功能包括：配置维护、域名服务、分布式同步、组服务等。
+    Zookeeper 同时支持分布式锁，这是一个非常重要的的功能。
+    Zookeeper 简单易用，性能高效，功能稳定。
+    另外，它提供了 Java 和 C 的接口。
+
+Q3:
+A3:
+    Watcher 监测节点的值的变化，并将新的值写入 hosts 文件中。
+    当有新的节点加入网络时，只需要将它的名字和地址写入 Zookeeper 中，别的节点就可以更新本地的 hosts 文件中。
+
+Q4:
+A4:
+    将 carts, user, orders 分别对应到不同的 Zookeeper 节点上，再将不同的数据库分别加入到相应的节点中。
